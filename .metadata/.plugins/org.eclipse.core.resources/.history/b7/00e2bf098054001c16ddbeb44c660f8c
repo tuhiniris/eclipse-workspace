@@ -1,0 +1,16 @@
+package net.javaguides.hibernate;
+
+import net.javaguides.hibernate.dao.StudentDao;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StudentDao studentDao = new StudentDao();
+		Student student = new Student("Tuhinadri","Banerjee","tuhiniris@gmail.com");
+		studentDao.saveStudent(student);
+		
+		Student student2 = studentDao.getStudentById();
+	}
+
+}

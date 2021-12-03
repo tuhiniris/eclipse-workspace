@@ -1,0 +1,22 @@
+package net.javaguides.hibernate.dao;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import net.javaguides.hibernate.model.Student;
+import net.javaguides.hibernate.util.HibernateUtil;
+
+public class StudentDao {
+	
+	public void saveStudent(Student student) {
+		Transaction transaction = null;
+		try(Session session = HibernateUtil.getSessionFactory().openSession()){
+			//Begin Transaction
+			transaction = session.beginTransaction();
+			
+			//Save Student Object
+			session.save(student);
+		}
+	}
+	
+}

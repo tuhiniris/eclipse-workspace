@@ -1,0 +1,13 @@
+package net.javaguides.hibernate.dao;
+
+import org.hibernate.Transaction;
+
+import net.javaguides.hibernate.model.Student;
+
+public class StudentDao {
+	
+	public void saveStudent(Student student) {
+		Transaction transaction = null;
+	}
+	
+}
