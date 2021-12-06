@@ -20,7 +20,7 @@ public class App {
 		studentDao.updateStudent(student);
 		
 		//GET STUDENT BY ID
-		//Student student2 = studentDao.getStudentById(student.getId());
+		Student student2 = studentDao.getStudentById(student.getId());
 		
 		//GET ALL STUDENT
 		List<Student> students = studentDao.getAllStudents();
